@@ -1,0 +1,12 @@
+---
+- hosts: master
+  tasks:
+  - name: creating local repo for ambari.repo
+    yum_repository:
+      name: ambari
+      description: ambari Version - ambari-2.7.3.0
+      baseurl: http://master.hadoop.com/AMBARI/ambari/centos7/2.7.3.0-139
+      gpgkey: http://master.hadoop.com/AMBARI/ambari/centos7/2.7.3.0-139/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+      gpgcheck: yes
+      enabled: yes
+...

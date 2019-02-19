@@ -1,0 +1,32 @@
+---
+- hosts:
+  tasks:
+  - name: Downloading tarballs  for Apache ambari
+    get_url:
+      url: http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.7.3.0/ambari-2.7.3.0-centos7.tar.gz
+      dest: /var/www/html/AMBARI/
+      owner: root
+      group: root
+      mode: 0777
+  - name: Downloading  the tarballs for HDP
+    get_url:
+      url: http://public-repo-1.hortonworks.com/HDP/centos7/3.x/updates/3.1.0.0/HDP-3.1.0.0-centos7-rpm.tar.gz
+      dest: /var/www/html/HDP/
+      owner: root
+      group: root
+      mode: 0777
+  - name: Downloading tarballs from internet hdp-util
+    get_url:
+      url: http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.22/repos/centos7/HDP-UTILS-1.1.0.22-centos7.tar.gz
+      dest: /var/www/html/HDP_UTIL
+      owner: root
+      group: root
+      mode: 0777
+  - name: Downloading the tarballs for HDP_GPL
+    get_url:
+      url: http://public-repo-1.hortonworks.com/HDP-GPL/centos7/3.x/updates/3.1.0.0/HDP-GPL-3.1.0.0-centos7-gpl.tar.gz
+      dest: /var/www/html/HDP_GPL/
+      owner: root
+      group: root
+      mode: 0777
+...

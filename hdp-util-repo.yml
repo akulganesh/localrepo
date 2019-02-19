@@ -1,0 +1,12 @@
+---
+- hosts: master
+  tasks:
+  - name: HDP-UTILS Version - HDP-UTILS-1.1.0.22 creating local repo for hdp-util.repo
+    yum_repository:
+      name: hdp.util
+      description: HDP-UTILS Version - HDP-UTILS-1.1.0.22
+      baseurl: http://master.hadoop.com/HDP_UTILS/HDP-UTILS/centos7/1.1.0.22
+      gpgkey: http://master.hadoop.com/HDP/HDP/centos7/3.1.0.0-78/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+      gpgcheck: yes
+      enabled: no
+...

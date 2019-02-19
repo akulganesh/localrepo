@@ -1,0 +1,33 @@
+---
+- hosts: master
+  tasks:
+  - name: this module represents Unarchiving the tarballs
+  - name: unarchive the ambari-2.7.3.0-centos7.tar.gz file
+    unarchive:
+      src: /var/www/html/AMBARI/ambari-2.7.3.0-centos7.tar.gz
+      dest: /var/www/html/AMBARI/
+      owner: root
+      group: root
+      remote_src: yes
+  - name: Unarchive HDP-3.1.0.0-centos7-rpm.tar.gz file
+    unarchive:
+      src: /var/www/html/HDP/HDP-3.1.0.0-centos7-rpm.tar.gz
+      dest: /var/www/html/HDP/
+      owner: root
+      group: root
+      remote_src: yes
+  - name: Unarchive the HDP-UTILS-1.1.0.22-centos7.tar.gz
+    unarchive:
+      src: /var/www/html/HDP_UTIL/HDP-UTILS-1.1.0.22-centos7.tar.gz
+      dest: /var/www/html/HDP_UTIL/
+      owner: root
+      group: root
+      remote_src: yes
+  - name: Unarchiving the HDP-GPL-3.0.1.0-centos7-gpl.tar.gz
+    unarchive:
+    src: /var/www/html/HDP_GPL/HDP-GPL-3.0.1.0-centos7-gpl.tar.gz
+    dest: /var/www/html/HDP_GPL/
+    owner: root
+    group: root
+    remote_src: yes
+...

@@ -1,0 +1,12 @@
+---
+- hosts: master
+  tasks:
+  - name: HDP Version - HDP-3.1.0.0 creating manual local repo hdp.repo
+    yum_repository:
+      name: hdp.gpl
+      description: HDP-GPL Version - HDP-GPL-3.1.0.0
+      baseurl: http://master.hadoop.com/HDP-GPL/centos7/3.1.0.0-78
+      gpgkey: http://master.hadoop.com/HDP-GPL/centos7/3.1.0.0-78/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+      gpgcheck: yes
+      enabled: yes
+...

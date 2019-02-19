@@ -1,0 +1,14 @@
+---
+- hosts: master
+  tasks:
+  - name: Creating Required Directories for localrepository setup
+    include: directory.yml
+  - name: Downloading the Tarall for Hortonworks site "https://docs.hortonworks.com/HDPDocuments/Ambari-2.7.1.0/bk_ambari-installation/content/hdp_30_repositories.html"
+    include: download.yml
+  - name: Unarchive the Tarballs it take time please wait dont terimainate middile if progress
+    include: unarchive.yml
+    include: amari.repo.yml
+    include: hdp.gpl.yml
+    include: hdp-repo.yml
+    include: hdp-util-repo.yml
+...
